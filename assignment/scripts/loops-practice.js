@@ -1,47 +1,102 @@
-console.log('****** Loops Practice *******');
+console.log('****** Array Practice *******');
+
+// 1. Creating arrays
+console.log('--- 1. Practice creating arrays ---');
+
+// Example: Array of animals
+let animalArray = ['fish', 'cat', 'bird', 'dog'];
+console.log('Animals are: ', animalArray);
+
+// 1.a. TODO: Make an array with some favorite foods
+let foodArray = ["steak", "bacon cheeseburger", "ribs"];
+
+// 1.b. TODO: Log your array of foods to the console with a message, similar
+//      to the example above
+console.log("My favorite foods are", foodArray);
 
 
-// 1. 'for' loop
-console.log('---- 1. For loops ----');
-// Example: a for loop to console.log numbers from 0 to 3
-console.log('count from 0 to 3');
-// start i at 0, while i is < 4 do code between {}, afterwards add 1 to i (i++)
-for (let i=0; i<4; i++) {  
-  console.log(i);
-}
+// 2. Array.length - tells you how many items are in the array
+console.log('--- 2. Length of an array ---');
 
-// 1.a. TODO: Write a for loop to console.log the numbers from 0 to 5 
-//   - Which part of the example loop do you need to change to do this?
-console.log('count from 0 to 5');
+// Example: How many animals are in the array?
+console.log('Number of animals:', animalArray.length);
 
-// 1.b. TODO: Write a for loop to console.log the numbers from 3 to 5
-//   - Which part of the example loop do you need to change to do this?
-console.log('count from 3 to 5');
+// 2.a. TODO: Log to the console the number of foods in your array
+console.log("Number of foods:", foodArray.length);
 
-// 1.c. TODO: Write a for loop to console.log EVEN numbers from 2 to 10
-//   - Which part of the example loop do you need to change to do this?
-console.log('count even numbers from 2 to 10 (2, 4, 6, 8, 10):');
+// 3. Accessing array items
+console.log('--- 3. Accessing items in an array ---');
 
-// 1.d. (STRETCH) TODO: Write a for loop to do a countdown from 5 to 0
-console.log('STRETCH: countdown from 5 to 0');
+// Example: Log the first animal from the array using it's array index
+console.log('First animal is', animalArray[0])
+
+// 3.a. TODO: Log the second animal in the array
+console.log("Second animal is", animalArray[1]);
+
+// 3.b. TODO: Log the last animal in the array using it's array index
+console.log("Last animal is", animalArray[3]);
+console.log("Last animal is", animalArray.slice(-1));
+// 3.c. (STRETCH) TODO: Log the last animal by using the array length,
+//      instead of the exact index number of the last item
+
+console.log("Last animal is", animalArray.length);
+
+// 4. Adding & Removing Array Items
+console.log('--- 4. Adding and removing array items ---');
+
+// Example: Add an animal to the end using Array.push
+animalArray.push('penguin');
+console.log('Added an animal to end,', animalArray);
+
+// 4.a. TODO: Add a new food at the end of your array & log the array
+foodArray.push("cinnamin french toast");
+console.log("Added more food to the end", foodArray);
 
 
-// 2. For of loops  
-console.log('---- 2. For Of loop ----');
-let stars = ['Polaris', 'Gacrux', 'Formalhaut', 'Rigel', 'Deneb']
+// Example: Remove the last animal by using Array.pop
+let removedAnimal = animalArray.pop();
+console.log('Removed the last animal', removedAnimal);
+console.log('The animals are now', animalArray);
 
-// 2.a. TODO: Write a for of loop to console.log each star in the 'stars' array
-console.log('Some stars:');
+// 4.b. TODO: Remove the food at the end of your array &
+//      log both the food removed and the updated array
+let removedFood = foodarray.pop();
+console.log("Removed the last item", removedFood);
+console.log("The items are now", foodArray);
 
+// Example: Add an animal to the beginning using Array.unshift
+animalArray.unshift('walrus');
+console.log(`Added an animal to beginning: ${animalArray}`);
 
-// 3. While loops  
-console.log('---- 3. While loop ----');
+// 4.c. TODO: Add a food at the beginning of the array & log the array
+foodArray.unshift("tacos");
+console.log(`Added tacos to the beginning: ${foodArray}`)
 
-// 3.a. TODO: Write a while loop to console.log each star in the 'stars' array
-console.log('Some stars using while:');
+// Example: Remove the first animal using Array.shift
+removedAnimal = animalArray.shift();
+console.log('Removed the first animal', removedAnimal);
+console.log('The animals are now', animalArray);
 
-// 3.b. TODO: Write a while loop to console.log the numbers from 0 to 5
-console.log('count from 0 to 5');
+// 4.d TODO: Remove the food at the beginning of your array &
+//     log both the food removed and the updated array
+removedFood = foodArray.shift();
+console.log('Removed the first food', removedfood);
+console.log('The food is now', foodArray);
+// 4.e (STRETCH) TODO: Replace the second food in your array
+//      with another one of your favorite foods.
+//      Then log the updated array.
 
-// 3.c. TODO: Write a while loop to console.log the numbers from 10 to 5
-console.log('count backwards from 10 to 5');
+// 4.f (STRETCH) TODO: Sort your favoriteFoods array
+//     in reverse alphabetical order. Log the array.
+
+// 4.g (STRETCH) TODO: Convert your array to a string
+//     putting the word "and" between each item.
+//     eg "tacos and pizza and pasta". Log the string.
+
+// 4.h (STRETCH) TODO: Make a new array that combines
+//     the favorite foods array with the animals array.
+//     Then log the new array.
+//     It should look something like:
+//     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+let newArray = ['fish', 'Steak', 'bacon cheeseburger', 'dog'];
+console.log("My favorite things are", newArray);
